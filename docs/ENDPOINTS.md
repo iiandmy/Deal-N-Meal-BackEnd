@@ -1,7 +1,18 @@
 ## BACK-END Endpoints
 ##### Parent endpoint -- konstanta.tech:8081
 ## Users: /user
-- POST /registration
+- PUT /registration
+```JSON
+{
+    "name": "konstantin",
+    "surname": "volkov",
+    "email": "volkovkonstantinn@gmail.com",
+    "contactNumber": "+375445618573",
+    "birthDate" : "2002/11/01",
+    "username": "konstantin",
+    "password": "3ed815"
+}
+```
 - POST /login
 - GET /logout
 ## Restaurants: /restaurants
