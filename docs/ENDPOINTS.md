@@ -2,51 +2,51 @@
 ##### Parent endpoint -- konstanta.tech:8081
 ## Users: /user
 - PUT /registration
-```JSON
+```json
 {
-    "name": "konstantin",
-    "surname": "volkov",
-    "email": "volkovkonstantinn@gmail.com",
-    "contactNumber": "+375445618573",
-    "birthDate" : "2002/11/01",
-    "username": "konstantin",
-    "password": "3ed815"
+	"name": "konstantin",
+	"surname": "volkov",
+	"email": "volkovkonstantinn@gmail.com",
+	"contactNumber": "+375445618573",
+	"birthDate" : "2002/11/01",
+	"username": "konstantin",
+	"password": "3ed815"
 }
 ```
 - POST /login
 - GET /logout
 ## Restaurants: /restaurants
 #### Restaurant search entity:
-```JSON
+```json
 {
-	restaurant_id: Int,
-	name: String,
-	category: String,
-	img: String,
-	description: String,
-	address: {
-		wid: Float,
-		len: Float	
+	"restaurant_id": 101,
+	"name": "KFC",
+	"category": "healthy-food",
+	"img": "www.mcdonaldssucks.com/burgerkingtop.jpg",
+	"description": "Healthy food for all family. Feels Good.",
+	"address": {
+		"wid": 102.32162745426,
+		"len": 58.35167723421
 	}
 }
 ```
 #### Restaurant entity:
-```JSON
+```json
 {
-	restaurant_id: Int,
-	owner: Owner_DTO,
-	menus: [Menu],
-	category: String,
-	reviews: [Review],
-	name: String,
-	description: String,
-	img: String,
-	address: {
-		wid: double,
-		len: double
+	"restaurant_id": 100,
+	"owner": Owner_DTO,
+	"menus": [Menu],
+	"category": "fast-food",
+	"reviews": [Review],
+	"name": "McDonald's",
+	"description": "Tasty and that's the point.",
+	"img": "www.supercoolimghost.com/burgerking",
+	"address": {
+		"wid": 102.32162745426,
+		"len": 58.35167723421
 	},
-	phone_number: String,
-	email: String
+	"phone_number": "+375291488228",
+	"email": "kfc@mail.ru"
 }
 ```
 ----
@@ -54,12 +54,12 @@
 #### Request:
 ```json
 {
-	current_location: {
-		wid: double,
-		len: double
+	"current_location": {
+		"wid": 102.32162745426,
+		"len": 58.35167723421
 	},
-	parameter: String,
-	search_string: String
+	"parameter": "name",
+	"search_string": "McDonald's"
 }
 ```
 #### Response
