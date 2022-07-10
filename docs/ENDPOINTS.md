@@ -14,6 +14,17 @@
 }
 ```
 - POST /login
+## JSON не отправляется просто POST-запрос
+```html 
+<form method="POST">
+	<input name="username">
+	<input name="password">
+	<button type="submit">
+</form>
+```
+#### username html field: name="username"
+#### password html field: name="password"
+
 - GET /logout
 ## Restaurants: /restaurants
 #### Restaurant search entity:
