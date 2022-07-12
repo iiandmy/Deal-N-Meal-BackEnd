@@ -27,7 +27,7 @@
 }
 ```
 
-## All other requests to server has to cantain HTTP-Header:
+## All other requests to server has to contain HTTP-Header:
 #### key: Authorization value: Bearer access-token-value
 #### if there's an error like: "Token has expired" you have to refresh access-token sending GET-request to /token/refresh(probably, will be changed) with HTTP-Header: 
 #### Authorization value: Bearer Refresh-token-value
