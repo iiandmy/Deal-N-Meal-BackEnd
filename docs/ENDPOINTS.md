@@ -1,6 +1,6 @@
 ## BACK-END Endpoints
 ##### Parent endpoint -- konstanta.tech:8081
-## Users: /user
+## Registration, authentication and authorization 
 - PUT /registration
 ```json
 {
@@ -14,7 +14,7 @@
 }
 ```
 - POST /login
-##Request
+## Request
 #### Working with Http-body
 #### key: username value: USERNAME_ПОЛЬЗОВАТЕЛЯ
 #### key: password value: PASSWORD_ПОЛЬЗОВАТЕЛЯ
@@ -27,11 +27,11 @@
 }
 ```
 
-##All other requests to server has to cantain HTTP-Header:
+## All other requests to server has to cantain HTTP-Header:
 #### key: Authorization value: Bearer access-token-value
 #### if there's an error like: "Token has expired" you have to refresh access-token sending GET-request to /token/refresh(probably, will be changed) with HTTP-Header: 
-####Authorization value: Bearer Refresh-token-value
-####The server will give you response like:
+#### Authorization value: Bearer Refresh-token-value
+#### The server will give you response like:
 ```json
 {
     "Access-Token": "ACCESS_TOKEN_VALUE",   -new access token
