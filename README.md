@@ -1,7 +1,7 @@
 # Deal-N-Meal-BackEnd
 
 ## Контакты:
-- *[Константин (https://vk.com/jopa_s_ry4koy)*
+- *[Константин](https://vk.com/jopa_s_ry4koy)*
 - *[Иван](https://vk.com/unrealshom)*
 - *[Леонид](https://vk.com/noel_vecug)*  
 
