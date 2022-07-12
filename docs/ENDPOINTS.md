@@ -14,16 +14,33 @@
 }
 ```
 - POST /login
-## JSON не отправляется просто POST-запрос
-```html 
-<form method="POST">
-	<input name="username">
-	<input name="password">
-	<button type="submit">
-</form>
+##Request
+#### Working with Http-body
+#### key: username value: USERNAME_ПОЛЬЗОВАТЕЛЯ
+#### key: password value: PASSWORD_ПОЛЬЗОВАТЕЛЯ
+
+##Response
+```json
+{
+    "Access-Token": "ACCESS_TOKEN_VALUE",
+    "Refresh-Token": "REFRESH_TOKEN_VALUE"
+}
 ```
-#### username html field: name="username"
-#### password html field: name="password"
+
+##All other requests to server has to cantain HTTP-Header:
+#### key: Authorization value: Bearer access-token-value
+#### if there's an error like: "Token has expired" you have to refresh access-token sending GET-request to /token/refresh(probably, will be changed) with HTTP-Header: 
+####Authorization value: Bearer Refresh-token-value
+####The server will give you response like:
+```json
+{
+    "Access-Token": "ACCESS_TOKEN_VALUE",   -new access token
+    "Refresh-Token": "REFRESH_TOKEN_VALUE"
+}
+
+````
+
+
 
 - GET /logout
 ## Restaurants: /restaurants
