@@ -16,8 +16,8 @@
 - POST /login
 ## Request
 #### Working with Http-body
-#### key: username value: USERNAME_ПОЛЬЗОВАТЕЛЯ
-#### key: password value: PASSWORD_ПОЛЬЗОВАТЕЛЯ
+#### key: username, value: USERNAME_ПОЛЬЗОВАТЕЛЯ
+#### key: password, value: PASSWORD_ПОЛЬЗОВАТЕЛЯ
 
 ##Response
 ```json
