@@ -39,10 +39,33 @@
 }
 
 ````
+## Post /giveRole
+#### Only for users, who has ROLE_ADMIN
+
+```json
+{ 
+    "username" : "USERNAME",
+    "roles":
+    [
+        "ROLE_NAME"
+    ]
+}
+```
+
+## Post /addNewRole
+#### Only for users, who has ROLE_ADMIN
+
+```json
+{ 
+    "role_names":
+    [
+        "ROLE_NAME",
+	"ROLE_NAME",
+	"ROLE_NAME"
+    ]
+}
 
 
-
-- GET /logout
 ## Restaurants: /restaurants
 #### Restaurant search entity:
 ```json
