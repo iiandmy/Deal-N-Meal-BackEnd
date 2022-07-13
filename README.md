@@ -14,7 +14,6 @@
 - https://docs.spring.io/spring-boot/docs/2.3.9.RELEASE/reference/html/spring-boot-features.html  
 
 ## ТЗ:
-- Авторизация и аутентификация при помощи JWT
 - Доработка сервисов ресторанов и меню (CRUD)
 - Поиск ближайших ресторанов по координатам
 - Валидация параметров запросов
