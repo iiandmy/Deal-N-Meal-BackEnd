@@ -2,6 +2,7 @@ package com.example.dealnmeal.models;
 
 import javax.persistence.*;
 import lombok.*;
+import net.minidev.json.annotate.JsonIgnore;
 
 import java.util.*;
 
@@ -21,7 +22,7 @@ public class User {
     private String name;
     @Column(name = "surname")
     private String surname;
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
 
     @Column(name = "email")
@@ -34,6 +35,7 @@ public class User {
     @Column(name = "registration_date")
     private Date registrationDate;
 
+    @JsonIgnore
     @Column(name = "password")
     private String password;
 
@@ -41,5 +43,5 @@ public class User {
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Collection<Role> rolesSet;
+    private Collection<Role> roles;
 }
