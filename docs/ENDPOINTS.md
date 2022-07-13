@@ -83,7 +83,8 @@
 	}
 }
 ```
-#### Restaurant entity:
+
+## Restaurant entity:
 ```json
 {
 	"restaurant_id": 100,
