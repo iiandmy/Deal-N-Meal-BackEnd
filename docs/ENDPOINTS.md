@@ -19,7 +19,7 @@
 #### key: username, value: USERNAME_ПОЛЬЗОВАТЕЛЯ
 #### key: password, value: PASSWORD_ПОЛЬЗОВАТЕЛЯ
 
-##Response
+## Response
 ```json
 {
     "Access-Token": "ACCESS_TOKEN_VALUE",
