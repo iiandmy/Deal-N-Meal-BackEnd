@@ -47,7 +47,9 @@
     "username" : "USERNAME",
     "roles":
     [
-        "ROLE_NAME"
+        "ROLE_NAME",
+	"ROLE_NAME",
+	"ROLE_NAME"
     ]
 }
 ```
