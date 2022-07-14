@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -38,7 +39,7 @@ public class Restaurant {
     @JoinTable(name = "restaurants_tags",
             joinColumns = @JoinColumn(name = "restaurant_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))
-    private Collection<RestaurantTag> tags;
+    private Collection<RestaurantTag> tags = new ArrayList<>();
 
     @OneToMany
     @JoinColumn(name = "restaurant_id")

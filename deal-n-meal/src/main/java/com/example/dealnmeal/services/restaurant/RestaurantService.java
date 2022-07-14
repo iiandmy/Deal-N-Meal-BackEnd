@@ -5,5 +5,5 @@ import net.sf.json.JSONObject;
 
 public interface RestaurantService {
 
-    Restaurant saveRestaurant(String restaurant);
+    Restaurant saveRestaurant(JSONObject restaurantJson);
 }

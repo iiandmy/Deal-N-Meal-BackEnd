@@ -22,23 +22,20 @@ public class RestaurantServiceImpl implements RestaurantService {
     private final RestaurantTagsDAO restaurantTagsDAO;
 
     @Override
-    public Restaurant saveRestaurant(String restaurantStrJson) {
-//        Restaurant restaurant = new Restaurant();
-//        JSONObject restaurantJson = JSONObject.fromObject(restaurantStrJson);
-//        restaurant.setRestaurantName(restaurantJson.getString("restaurantName"));
-//        restaurant.setRestaurantDescription(restaurantJson.getString("restaurantDescription"));
-//        restaurant.setRestaurantAddress(restaurantJson.getString("restaurantAddress"));
-//        restaurant.setRestaurantPhone(restaurantJson.getString("restaurantPhone"));
-//        restaurant.setRestaurantEmail(restaurantJson.getString("restaurantEmail"));
-//
-//        JSONArray restaurantTagsJson = restaurantJson.getJSONArray("restaurantTags");
-//        restaurantTagsJson.forEach(tag -> {
-//            RestaurantTag restaurantTag = new RestaurantTag(null, tag.toString());
-//            restaurantTagsDAO.save(restaurantTag);
-//            restaurant.getTags().add(restaurantTag);
-//        });
+    public Restaurant saveRestaurant(JSONObject restaurantJson) {
+        Restaurant restaurant = new Restaurant();
+        restaurant.setRestaurantName(restaurantJson.getString("restaurantName"));
+        restaurant.setRestaurantDescription(restaurantJson.getString("restaurantDescription"));
+        restaurant.setRestaurantAddress(restaurantJson.getString("restaurantAddress"));
+        restaurant.setRestaurantPhone(restaurantJson.getString("restaurantPhone"));
+        restaurant.setRestaurantEmail(restaurantJson.getString("restaurantEmail"));
+        JSONArray restaurantTagsJson = restaurantJson.getJSONArray("tags");
+        restaurantTagsJson.forEach(tag -> {
+            RestaurantTag restaurantTag = new RestaurantTag(null, tag.toString());
+            restaurantTagsDAO.save(restaurantTag);
+            restaurant.getTags().add(restaurantTag);
+        });
 
-        return null;
-//        return restaurantDAO.save(restaurant);
+        return restaurantDAO.save(restaurant);
     }
 }
